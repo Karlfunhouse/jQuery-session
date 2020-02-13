@@ -14,17 +14,38 @@ Use the [jQuery Documentation](https://api.jquery.com/) to answer the following 
 ## Questions:
 1. How do you select a single element in jQuery? How does this differ from vanilla JS?
 
+  You can select a single element by putting the id of that element in the selector area.  We don't have to use a querySelector to access the element.
+
 2. What does the jQuery function return? How is it similar or different from a DOM Element object?
+
+
+  It returns a jQuery Object.  The jQuery Object: The Wrapped Set: Selectors return a jQuery object known as the "wrapped set," which is an array-like structure that contains all the selected DOM elements. You can iterate over the wrapped set like an array or access individual elements via the indexer ($(sel)[0] for example). More importantly, you can also apply jQuery functions against all the selected elements.
 
 3. How can you select multiple elements with jQuery?
 
+  By chaining the elements together inside the element selector () separated by commas, all contained within a single set of quotes.
+
 4. How can you select multiple elements with different IDs and classes in one selector expression?
+
+  The same way as in question 3, separate them by commas within the same quotes.
 
 5. What are the different ways of chaining selectors?
 
+  Chaining different IDs in the selector expression then using .find() with the class name inside.
+
 6. How do you select elements based on different attributes?
 
+    You can select elements that start with a certain string by using $("[name^='value']") or elements that don't contain the value using "[name!='value']".
+
+    Also there's "[name*="value"]" which is an attribute contains selector.  
+
+
+
 7. How do you select a checkbox based on its state?
+
+if ( elem.checked )
+if ( $( elem ).prop( "checked" ) )
+if ( $( elem ).is( ":checked" ) )
 
 
 ## Exercises:
