@@ -32,19 +32,31 @@ jQuery provides methods that shorten up most Vanilla JS DOM operations. Let's lo
 
 ## Questions:
 1. How do you get the text from an element (like a paragraph) with jQuery?
+  $('p').text()
 2. How do you set the text of an element?
+  $('p').text('new words here')
 3. How do you get the html inside of an element in jQuery? How would you do this in Vanilla JS?
+  $('element').html()  vanilla: document.querySelector('h1').innerHTML
 4. How do you get the text / content from an input?
+  $('input').val()
 5. How do you set the text / content of an input?
+  $('input').val('new text here')
 6. How do you add / remove / toggle classes on an element?
+  $('element').addClass('class')
+  $('element').removeClass('class')
+  $('element').toggleClass('class')
 7. What’s the difference between .text() and .text([some text here])?
+  .text() Get the combined text contents of each element in the set of matched elements, including their descendants.
+  .text(text) will set the text to whatever is within the .text() method.
 8. If you select multiple elements with jQuery, do you have to use a for loop / iterate through each to modify their content? Give an example.
+    No, it will search for all the elements that match the requirements.
 
 ## Exercises:
 Open up the `content.html` file in your browser, and the `content.js` file in your code editor.
 
 Within the JS file, use jQuery to:
 1. Modify the inner text of the 'Save Contact' button to say "Add New Buddy"
+
 2. Make the check box labels more enthusiastic (ex: `Yes!!!` or `No!!!`)
 3. Give all of the inputs default values when the page loads (not placeholders -- actual values)
 4. Select both headings (h1 and h2) and change them to say "Contact Form".
